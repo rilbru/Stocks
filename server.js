@@ -14,8 +14,6 @@ app.use(express.urlencoded({
 }))
 
 app.use(express.static('public'));
-// Note: Don't add or change anything above this line.
-
 
 // POST route handler for when the form on the stock order page
 // is submitted, req argument has the request
@@ -73,7 +71,6 @@ app.post('/order', (req, res) => {
   }
   
 
-// Note: Don't add or change anything below this line.
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`);
 })
