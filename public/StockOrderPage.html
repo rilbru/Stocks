@@ -1,0 +1,76 @@
+<!--
+  StockOrderPage.html
+  Provides a table of the stocks available for purchase and a form to order stocks
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Stock Order</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1 class="a">Place an order for one of the following stocks</h1>
+    <!-- table to display company, symbol, and price of stocks -->
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Symbol</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Splunk</td>
+                <td>SPLK</td>
+                <td>$137.55</td>
+            </tr>
+            <tr>
+                <td>Microsoft</td>
+                <td>MSFT</td>
+                <td>$232.04</td>
+            </tr>
+            <tr>
+                <td>Oracle</td>
+                <td>ORCL</td>
+                <td>$67.08</td>
+            </tr>
+            <tr>
+                <td>Snowflake</td>
+                <td>SNOW</td>
+                <td>$235.80</td>
+            </tr>
+            <tr>
+                <td>Teradata</td>
+                <td>TDC</td>
+                <td>$44.98</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <!-- form to submit for the symbol -->
+    <form action="/order" method="POST">
+        <!-- label for the symbol dropdown menu -->
+        <label for="symbol">Stock Symbol:</label>
+        <select id="symbol" name="symbol">
+            <!-- options for symbols in dropdown menu -->
+            <option value="SPLK">SPLK</option>
+            <option value="MSFT">MSFT</option>
+            <option value="ORCL">ORCL</option>
+            <option value="SNOW">SNOW</option>
+            <option value="TDC">TDC</option>
+        </select>
+        <br />
+        <br />
+        <!-- label for the quantity -->
+        <label for="quantity">Enter Qyantity:</label>
+        <!-- input for the quantity of stocks -->
+        <input type="number" id="quantity" name="quantity" required="required">
+        <br />
+        <br />
+        <!-- submit button -->
+        <button type="submit">Submit</button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!--
+  StockSearchPage.html
+  Provides a form for users to select an option to search for
+  highest/lowest price of stocks
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stock Search</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Search Stocks</h1>
+    <p>Please make a selection:</p>
+    <!-- form to submit the option -->
+    <form action="/stock-search" method="POST">
+      <!-- radio button option for highest price -->
+      <input type="radio" name="option" value="highest" id="highest" required="required">
+      <label for="highest">Highest Price</label>
+      <br />
+      <!-- radio button option for lowest price -->
+      <input type="radio" name="option" value="lowest" id="lowest" required="required">
+      <label for="lowest">Lowest Price</label>
+      <br />
+      <br />
+      <!-- submit search button -->
+      <button type="submit">Search</button>
+    </form>
+  </body>
+</html>
